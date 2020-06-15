@@ -1,0 +1,145 @@
+// DESKTOP > 1024px
+a{
+  text-decoration: none;
+}
+.sub-menu-active-mobile{
+  display: none;
+}
+nav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 8vh;
+  justify-content: space-around;
+  background-color: #181425;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  .nav-desktop{
+    margin-right: 3rem;
+    li{
+      padding-bottom: 0;
+    }
+  }
+  ul{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    
+    li{
+      list-style-type: none;
+      padding-right: 1rem;
+      color: whitesmoke;
+      padding-bottom: 1rem;
+      a{
+        text-decoration: none;
+        color: whitesmoke;
+      }
+      a:hover{
+        color: #5dfdc8;
+      }
+      button{
+        background: none;
+        border: none;
+        text-align: center;
+        color: whitesmoke; 
+        font-size: 1.2rem; 
+        display: flex;
+        align-items: center;
+      }
+      button:hover{
+        color: #5dfdc8;
+      }
+    }
+  }
+  .sub-menu-active{
+    display: flex;
+    background-color: #181425;
+    flex-direction: column;
+    top: 8vh;
+    width: 30%;
+    height: max-content;
+    position: fixed;
+    justify-content: left;
+    text-align: right;
+    right: 0;
+    padding: 1rem;
+  }
+}
+
+// we hide the mobile version nav and burger menu item while we are on a big screen
+.nav-links-mobile{
+  display: none;
+}
+.burger{
+  display: none;
+}
+.burger div{
+  width: 25px;
+  height: 3px;
+  background-color: whitesmoke;
+  margin: 5px;
+}
+.closed{
+  display: none;
+}
+
+@media only screen and (max-width: 800px){
+  .nav-desktop{
+    display: none;
+  }
+  .sub-menu-active-mobile{
+    display: block;
+  }
+  nav{
+    flex-direction: row;
+    justify-content: flex-end;
+    .sub-menu-active{
+      display: none;
+    }
+  }
+
+  .nav-links-mobile{
+    display: block;
+    position: fixed;
+    height: max-content;
+    top: 8vh;
+    background-color: #181425;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+    justify-content: space-around;
+    text-align: left;
+    font-size: larger;
+    margin-top: 0;
+      li{
+        text-align: left;
+        margin-left: 3rem;
+      }
+  }
+
+  //these properies will activate dynamically thanks to the useState
+  .burger{
+      display: block;
+      cursor: pointer;
+      margin-right: 3rem;
+  }
+  .toggle .line1{
+      transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .toggle .line2{
+      opacity: 0;
+  }
+  .toggle .line3{
+      transform: rotate(45deg) translate(-5px, -6px);
+  }
+    .nav-active-mobile{
+        transform: translateX(0%);
+        transition: transform 0.3s ease-in;
+    }
+}
+
+

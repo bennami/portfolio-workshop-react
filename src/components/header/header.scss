@@ -1,0 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.header{
+
+  background-color: #6e63d2;
+  display: flex;
+  img{
+    width: 400px;
+    height: 400px;
+    align-self: center;
+    padding:5rem;
+
+  }
+
+.header-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h2{
+    text-align: left;
+    color: whitesmoke;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 800;
+  }
+  p{
+
+    color: #191039;
+  }
+}
+
+}
+

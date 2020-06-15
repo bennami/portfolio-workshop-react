@@ -1,0 +1,40 @@
+/* Nerdy secret: You can use "less" below! Don't tell anybody... */
+h1,h3{
+  font-family: ".SF NS Mono",sans-serif;
+  margin:  2vh auto;
+  text-align: center;
+}
+.form-gh{
+  background-color: #3a3058;
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  padding-bottom: 2rem;
+  justify-content: center;
+  width:100%;
+  margin-top: 10px;
+  input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #d287d2;
+    color: whitesmoke;
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 40vw;
+  }
+  button{
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    margin-left: 1rem;
+    background-color:transparent;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  button:hover{
+    border: 1px solid #d287d2;
+    background: #d287d2;
+  }
+
+}
+
