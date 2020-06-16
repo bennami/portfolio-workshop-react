@@ -16,19 +16,22 @@ function Profile() {
     const [repositories, setRepositories] = useState([]);
     const history = useHistory();
 
-    useEffect(()=>{
-        async function getData(){
+    useEffect( () => {
+      async function fetchData() {
+
             const resp = await
-                axios.get(`https://api.github.com/users/${slug}`);
+                axios.get(`https://api.github.com/users/${slug}`)
+                    //.then(profile =>{return profile});
             setProfile(resp.data);
             const repos = await
                 axios.get(`https://api.github.com/users/${slug}/repos`);
             setRepositories(repos.data);
             history.push(`/profile/${slug}`);
         }
-        getData();
+        fetchData();
+
     },[slug,history]);
-    console.log(history)
+    //console.log(history)
     //console.log(profile);
 
 
