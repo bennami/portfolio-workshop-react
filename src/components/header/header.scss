@@ -36,3 +36,16 @@
 
 }
 
+@media (max-width: 600px ){
+  .header{
+    flex-direction: column;
+    .header-text{
+      margin-bottom: 1rem;
+      p,h2 {
+        text-align: center;
+      }
+    }
+  }
+
+}
+

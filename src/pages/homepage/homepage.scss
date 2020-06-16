@@ -1,8 +1,10 @@
-/* Nerdy secret: You can use "less" below! Don't tell anybody... */
+
 h1,h3{
   font-family: ".SF NS Mono",sans-serif;
   margin:  2vh auto;
   text-align: center;
+  padding: 1rem;
+  font-weight: 300;
 }
 .form-gh{
   background-color: #3a3058;
@@ -11,8 +13,10 @@ h1,h3{
   align-items: center;
   padding-bottom: 2rem;
   justify-content: center;
-  width:100%;
-  margin-top: 10px;
+  margin: 10px  auto 0  auto;
+  justify-self: center;
+  width:90%;
+
   input{
     background-color: transparent;
     border: none;

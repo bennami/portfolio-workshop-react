@@ -12,6 +12,7 @@ function Profile() {
 
     const {slug} = useParams();
     const [profile, setProfile] = useState([]);
+    const  backupImg  ='https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/6554645/original/kirby_gusta_by_dark_saito-d3gvx6c/give-a-derp-face.jpg'
     const [repositories, setRepositories] = useState([]);
     const history = useHistory();
 
@@ -27,8 +28,8 @@ function Profile() {
         }
         getData();
     },[slug,history]);
-
-    console.log(profile);
+    console.log(history)
+    //console.log(profile);
 
 
     let color;
@@ -42,7 +43,7 @@ function Profile() {
         return  color = `rgb(${r},${g},${b})`;
     };
     randomColor();
-    console.log(color)
+    console.log(profile);
 
     return(
 
@@ -51,8 +52,14 @@ function Profile() {
             <Nav/>
             <Header
                 name={slug}
-                avatar_url={profile.avatar_url}
+                avatar_url={
+                    profile.length === 0
+                    ?
+                    backupImg
+                    : profile.avatar_url
+                }
                 bio ={profile.bio}
+
             />
             <section className={'listOfCards'}>
 
